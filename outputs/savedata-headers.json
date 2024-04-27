@@ -1,0 +1,15 @@
+{
+      "accept-ranges": "bytes",
+      "age": "442214",
+      "cache-control": "max-age=604800",
+      "content-type": "text/html; charset=UTF-8",
+      "date": "Wed, 06 Mar 2024 12:16:32 GMT",
+      "etag": "\"3147526947\"",
+      "expires": "Wed, 13 Mar 2024 12:16:32 GMT",
+      "last-modified": "Thu, 17 Oct 2019 07:18:26 GMT",
+      "server": "ECS (nyd/D140)",
+      "vary": "Accept-Encoding",
+      "x-cache": "HIT",
+      "content-length": "648",
+      "connection": "close"
+}

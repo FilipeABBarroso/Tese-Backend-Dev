@@ -1,0 +1,11 @@
+{
+      "virustotal.py": [
+            {
+                  "entity": "www.academiamilitar.pt",
+                  "malicious analysis": 0,
+                  "suspicious analysis": 0,
+                  "undetected analysis": 26,
+                  "harmless analysis": 64
+            }
+      ]
+}

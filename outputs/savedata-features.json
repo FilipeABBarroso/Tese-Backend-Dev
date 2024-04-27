@@ -1,0 +1,165 @@
+{
+      "first": 1294059600,
+      "last": 1709712000,
+      "domain": "example.com",
+      "groups": [
+            {
+                  "name": "ssl",
+                  "live": 2,
+                  "dead": 0,
+                  "latest": 1709712000,
+                  "oldest": 1376002800,
+                  "categories": [
+                        {
+                              "live": 1,
+                              "dead": 0,
+                              "latest": 1709712000,
+                              "oldest": 1376002800,
+                              "name": "root-authority"
+                        }
+                  ]
+            },
+            {
+                  "name": "javascript",
+                  "live": 0,
+                  "dead": 1,
+                  "latest": 1351774800,
+                  "oldest": 1296478800,
+                  "categories": [
+                        {
+                              "live": 0,
+                              "dead": 1,
+                              "latest": 1351774800,
+                              "oldest": 1296478800,
+                              "name": "javascript-library"
+                        }
+                  ]
+            },
+            {
+                  "name": "Server",
+                  "live": 1,
+                  "dead": 1,
+                  "latest": 1709193600,
+                  "oldest": 1296478800,
+                  "categories": []
+            },
+            {
+                  "name": "Web Server",
+                  "live": 0,
+                  "dead": 1,
+                  "latest": 1365080400,
+                  "oldest": 1294059600,
+                  "categories": []
+            },
+            {
+                  "name": "mx",
+                  "live": 1,
+                  "dead": 0,
+                  "latest": 1709193600,
+                  "oldest": 1397084400,
+                  "categories": []
+            },
+            {
+                  "name": "mobile",
+                  "live": 2,
+                  "dead": 0,
+                  "latest": 1709712000,
+                  "oldest": 1388530800,
+                  "categories": []
+            },
+            {
+                  "name": "hosting",
+                  "live": 4,
+                  "dead": 1,
+                  "latest": 1709107200,
+                  "oldest": 1467068400,
+                  "categories": [
+                        {
+                              "live": 1,
+                              "dead": 1,
+                              "latest": 1709107200,
+                              "oldest": 1467068400,
+                              "name": "us-hosting"
+                        },
+                        {
+                              "live": 1,
+                              "dead": 0,
+                              "latest": 1705392000,
+                              "oldest": 1622584800,
+                              "name": "australian-hosting"
+                        },
+                        {
+                              "live": 1,
+                              "dead": 0,
+                              "latest": 1704787200,
+                              "oldest": 1698390000,
+                              "name": "server-location"
+                        }
+                  ]
+            },
+            {
+                  "name": "widgets",
+                  "live": 10,
+                  "dead": 4,
+                  "latest": 1708070400,
+                  "oldest": 1519858800,
+                  "categories": [
+                        {
+                              "live": 0,
+                              "dead": 2,
+                              "latest": 1682838000,
+                              "oldest": 1628146800,
+                              "name": "login"
+                        }
+                  ]
+            },
+            {
+                  "name": "CDN",
+                  "live": 0,
+                  "dead": 1,
+                  "latest": 1672300800,
+                  "oldest": 1568761200,
+                  "categories": []
+            },
+            {
+                  "name": "cms",
+                  "live": 1,
+                  "dead": 0,
+                  "latest": 1707984000,
+                  "oldest": 1628146800,
+                  "categories": []
+            },
+            {
+                  "name": "framework",
+                  "live": 0,
+                  "dead": 1,
+                  "latest": 1640246400,
+                  "oldest": 1639987200,
+                  "categories": []
+            },
+            {
+                  "name": "ns",
+                  "live": 1,
+                  "dead": 0,
+                  "latest": 1707984000,
+                  "oldest": 1651129200,
+                  "categories": []
+            },
+            {
+                  "name": "link",
+                  "live": 1,
+                  "dead": 0,
+                  "latest": 1709625600,
+                  "oldest": 1709625600,
+                  "categories": [
+                        {
+                              "live": 1,
+                              "dead": 0,
+                              "latest": 1709625600,
+                              "oldest": 1709625600,
+                              "name": "policy"
+                        }
+                  ]
+            }
+      ]
+}

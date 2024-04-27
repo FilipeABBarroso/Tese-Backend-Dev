@@ -1,0 +1,30 @@
+{
+      "virustotal.py": [
+            {
+                  "entity": "www.academiafa.edu.pt",
+                  "malicious analysis": 0,
+                  "suspicious analysis": 0,
+                  "undetected analysis": 25,
+                  "harmless analysis": 65
+            },
+            {
+                  "entity": "www.academiamilitar.pt",
+                  "malicious analysis": 0,
+                  "suspicious analysis": 0,
+                  "undetected analysis": 26,
+                  "harmless analysis": 64
+            },
+            {
+                  "entity": "escolanaval.marinha.pt",
+                  "malicious analysis": 0,
+                  "suspicious analysis": 0,
+                  "undetected analysis": 90,
+                  "harmless analysis": 0
+            }
+      ],
+      "tls.py": [
+            "{\"id\":57079832,\"timestamp\":\"2024-04-22T11:52:17.832653Z\",\"target\":\"www.academiafa.edu.pt\",\"replay\":-1,\"has_tls\":false,\"cert_id\":-1,\"trust_id\":-1,\"is_valid\":false,\"completion_perc\":0,\"connection_info\":{\"scanIP\":\"\",\"serverside\":false,\"ciphersuite\":null,\"curvesFallback\":false},\"ack\":true,\"attempts\":1,\"analysis_params\":{}}",
+            "{\"id\":57079833,\"timestamp\":\"2024-04-22T11:52:18.348329Z\",\"target\":\"www.academiamilitar.pt\",\"replay\":-1,\"has_tls\":false,\"cert_id\":-1,\"trust_id\":-1,\"is_valid\":false,\"completion_perc\":0,\"connection_info\":{\"scanIP\":\"\",\"serverside\":false,\"ciphersuite\":null,\"curvesFallback\":false},\"ack\":true,\"attempts\":1,\"analysis_params\":{}}",
+            "{\"id\":57079834,\"timestamp\":\"2024-04-22T11:52:18.841122Z\",\"target\":\"escolanaval.marinha.pt\",\"replay\":-1,\"has_tls\":false,\"cert_id\":-1,\"trust_id\":-1,\"is_valid\":false,\"completion_perc\":0,\"connection_info\":{\"scanIP\":\"\",\"serverside\":false,\"ciphersuite\":null,\"curvesFallback\":false},\"ack\":true,\"attempts\":1,\"analysis_params\":{}}"
+      ]
+}

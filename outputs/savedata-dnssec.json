@@ -1,0 +1,83 @@
+{
+      "DNSKEY": {
+            "isFound": false,
+            "answer": null,
+            "response": {
+                  "Status": 3,
+                  "TC": false,
+                  "RD": true,
+                  "RA": true,
+                  "AD": false,
+                  "CD": false,
+                  "Question": [
+                        {
+                              "name": "https://example.com.",
+                              "type": 48
+                        }
+                  ],
+                  "Authority": [
+                        {
+                              "name": "com.",
+                              "type": 6,
+                              "TTL": 900,
+                              "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1709727639 1800 900 604800 86400"
+                        }
+                  ],
+                  "Comment": "Response from 192.48.79.30."
+            }
+      },
+      "DS": {
+            "isFound": false,
+            "answer": null,
+            "response": {
+                  "Status": 3,
+                  "TC": false,
+                  "RD": true,
+                  "RA": true,
+                  "AD": false,
+                  "CD": false,
+                  "Question": [
+                        {
+                              "name": "https://example.com.",
+                              "type": 43
+                        }
+                  ],
+                  "Authority": [
+                        {
+                              "name": "com.",
+                              "type": 6,
+                              "TTL": 900,
+                              "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1709727654 1800 900 604800 86400"
+                        }
+                  ],
+                  "Comment": "Response from 2001:500:d937::30."
+            }
+      },
+      "RRSIG": {
+            "isFound": false,
+            "answer": null,
+            "response": {
+                  "Status": 3,
+                  "TC": false,
+                  "RD": true,
+                  "RA": true,
+                  "AD": false,
+                  "CD": false,
+                  "Question": [
+                        {
+                              "name": "https://example.com.",
+                              "type": 46
+                        }
+                  ],
+                  "Authority": [
+                        {
+                              "name": "com.",
+                              "type": 6,
+                              "TTL": 900,
+                              "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1709727654 1800 900 604800 86400"
+                        }
+                  ],
+                  "Comment": "Response from 2001:501:b1f9::30."
+            }
+      }
+}

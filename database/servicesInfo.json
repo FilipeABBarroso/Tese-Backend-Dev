@@ -1,0 +1,142 @@
+{
+  "archives.py": {
+    "testName": "Archives",
+    "testService": "Tool"
+  },
+  "blockLists.py": {
+    "testName": "Block Lists",
+    "testService": "Tool"
+  },
+  "carbon.py": {
+    "testName": "Carbon",
+    "testService": "Tool"
+  },
+  "cookies.py": {
+    "testName": "Cookies",
+    "testService": "Tool"
+  },
+  "dns.py": {
+    "testName": "DNS",
+    "testService": "Tool"
+  },
+  "dnssec.py": {
+    "testName": "DNSSEC",
+    "testService": "Tool"
+  },
+  "dnsServer.py": {
+    "testName": "DNS Server",
+    "testService": "Tool"
+  },
+  "domain.py": {
+    "testName": "Domain",
+    "testService": "Tool"
+  },
+  "features.py": {
+    "testName": "Features",
+    "testService": "Tool"
+  },
+  "firewall.py": {
+    "testName": "Firewall",
+    "testService": "Tool"
+  },
+  "headers.py": {
+    "testName": "Headers",
+    "testService": "Tool"
+  },
+  "hsts.py": {
+    "testName": "Hsts",
+    "testService": "Tool"
+  },
+  "httpSecurity.py": {
+    "testName": "http Security",
+    "testService": "Tool"
+  },
+  "internetnl.py": {
+    "testName": "Web/Mail",
+    "testService": "Internel.nl"
+  },
+  "ip.py": {
+    "testName": "Ip",
+    "testService": "Tool"
+  },
+  "linkedPages.py": {
+    "testName": "Linked Pages",
+    "testService": "Tool"
+  },
+  "mailConfig.py": {
+    "testName": "Mail Config",
+    "testService": "Tool"
+  },
+  "ping.py": {
+    "testName": "Ping st",
+    "testService": "Tool"
+  },
+  "quality.py": {
+    "testName": "Quality",
+    "testService": "Tool"
+  },
+  "rank.py": {
+    "testName": "Rank",
+    "testService": "Tool"
+  },
+  "redirects.py": {
+    "testName": "Redirects",
+    "testService": "Tool"
+  },
+  "robots.py": {
+    "testName": "Robots",
+    "testService": "Tool"
+  },
+  "screenshot.py": {
+    "testName": "Screenshot",
+    "testService": "Tool"
+  },
+  "sitemap.py": {
+    "testName": "Site Map",
+    "testService": "Tool"
+  },
+  "socialTags.py": {
+    "testName": "Social Tags",
+    "testService": "Tool"
+  },
+  "ssl.py": {
+    "testName": "Ssl",
+    "testService": "Tool"
+  },
+  "status.py": {
+    "testName": "Status",
+    "testService": "Tool"
+  },
+  "techStack.py": {
+    "testName": "Tech Stack",
+    "testService": "Tool"
+  },
+  "textSecurity.py": {
+    "testName": "Text Security",
+    "testService": "Tool"
+  },
+  "threats.py": {
+    "testName": "Threads",
+    "testService": "Tool"
+  },
+  "tls.py": {
+    "testName": "Tls",
+    "testService": "Tool"
+  },
+  "traceRoute.py": {
+    "testName": "Trace Route",
+    "testService": "Tool"
+  },
+  "txtRecords.py": {
+    "testName": "Text Records",
+    "testService": "Tool"
+  },
+  "virustotal.py": {
+    "testName": "Virustotal",
+    "testService": "VirusTotal"
+  },
+  "whois.py": {
+    "testName": "Whois",
+    "testService": "Whois"
+  }
+}

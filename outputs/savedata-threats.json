@@ -1,0 +1,38 @@
+{
+      "urlHaus": {
+            "query_status": "ok",
+            "urlhaus_reference": "https://urlhaus.abuse.ch/host/example.com/",
+            "host": "example.com",
+            "firstseen": "2023-03-28 11:35:11 UTC",
+            "url_count": "1",
+            "blacklists": {
+                  "spamhaus_dbl": "not listed",
+                  "surbl": "not listed"
+            },
+            "urls": [
+                  {
+                        "id": "2588812",
+                        "urlhaus_reference": "https://urlhaus.abuse.ch/url/2588812/",
+                        "url": "http://example.com/>example.com</a></p>",
+                        "url_status": "offline",
+                        "date_added": "2023-03-28 11:35:17 UTC",
+                        "threat": "malware_download",
+                        "reporter": "viql",
+                        "larted": "false",
+                        "takedown_time_seconds": null,
+                        "tags": [
+                              "dropped-by-amadey"
+                        ]
+                  }
+            ]
+      },
+      "phishTank": {
+            "error": "Request to PhishTank failed: Request failed with status code 429"
+      },
+      "cloudmersive": {
+            "error": "Request to Cloudmersive failed: Request failed with status code 401"
+      },
+      "safeBrowsing": {
+            "unsafe": false
+      }
+}

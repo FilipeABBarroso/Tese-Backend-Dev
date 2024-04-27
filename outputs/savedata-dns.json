@@ -1,0 +1,41 @@
+{
+      "A": {
+            "address": "93.184.216.34",
+            "family": 4
+      },
+      "AAAA": [
+            "93.184.216.34"
+      ],
+      "MX": [
+            "2606:2800:220:1:248:1893:25c8:1946"
+      ],
+      "TXT": [
+            {
+                  "exchange": "",
+                  "priority": 0
+            }
+      ],
+      "NS": [
+            [
+                  "wgyf8z8cgvm2qmxpnbnldrcltvk4xqfn"
+            ],
+            [
+                  "v=spf1 -all"
+            ]
+      ],
+      "CNAME": [
+            "b.iana-servers.net",
+            "a.iana-servers.net"
+      ],
+      "SOA": [],
+      "SRV": {
+            "nsname": "ns.icann.org",
+            "hostmaster": "noc.dns.icann.org",
+            "serial": 2024013026,
+            "refresh": 7200,
+            "retry": 3600,
+            "expire": 1209600,
+            "minttl": 3600
+      },
+      "PTR": []
+}

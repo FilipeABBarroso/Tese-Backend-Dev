@@ -1,0 +1,89 @@
+{
+      "blocklists": [
+            {
+                  "server": "AdGuard",
+                  "serverIp": "176.103.130.130",
+                  "isBlocked": false
+            },
+            {
+                  "server": "AdGuard Family",
+                  "serverIp": "176.103.130.132",
+                  "isBlocked": false
+            },
+            {
+                  "server": "CleanBrowsing Adult",
+                  "serverIp": "185.228.168.10",
+                  "isBlocked": false
+            },
+            {
+                  "server": "CleanBrowsing Family",
+                  "serverIp": "185.228.168.168",
+                  "isBlocked": false
+            },
+            {
+                  "server": "CleanBrowsing Security",
+                  "serverIp": "185.228.168.9",
+                  "isBlocked": false
+            },
+            {
+                  "server": "CloudFlare",
+                  "serverIp": "1.1.1.1",
+                  "isBlocked": false
+            },
+            {
+                  "server": "CloudFlare Family",
+                  "serverIp": "1.1.1.3",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Comodo Secure",
+                  "serverIp": "8.26.56.26",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Google DNS",
+                  "serverIp": "8.8.8.8",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Neustar Family",
+                  "serverIp": "156.154.70.3",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Neustar Protection",
+                  "serverIp": "156.154.70.2",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Norton Family",
+                  "serverIp": "199.85.126.20",
+                  "isBlocked": false
+            },
+            {
+                  "server": "OpenDNS",
+                  "serverIp": "208.67.222.222",
+                  "isBlocked": false
+            },
+            {
+                  "server": "OpenDNS Family",
+                  "serverIp": "208.67.222.123",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Quad9",
+                  "serverIp": "9.9.9.9",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Yandex Family",
+                  "serverIp": "77.88.8.7",
+                  "isBlocked": false
+            },
+            {
+                  "server": "Yandex Safe",
+                  "serverIp": "77.88.8.88",
+                  "isBlocked": false
+            }
+      ]
+}

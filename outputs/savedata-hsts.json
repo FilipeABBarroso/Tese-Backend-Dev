@@ -1,0 +1,5 @@
+{
+      "message": "Site does not serve any HSTS headers.",
+      "compatible": false,
+      "hstsHeader": null
+}

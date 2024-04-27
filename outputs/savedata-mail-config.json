@@ -1,0 +1,14 @@
+{
+      "mxRecords": [
+            {
+                  "exchange": "",
+                  "priority": 0
+            }
+      ],
+      "txtRecords": [
+            [
+                  "v=spf1 -all"
+            ]
+      ],
+      "mailServices": []
+}
