@@ -3,8 +3,11 @@ from contextlib import asynccontextmanager
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-engine = create_engine('mysql+pymysql://fb:root@localhost:3306/test', echo=True)
+engine = create_engine(os.getenv('DB_URL'), echo=True)
 
 def create_async_engine():
   return sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
