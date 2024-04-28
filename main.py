@@ -15,9 +15,8 @@ from controller.service.worker import worker
 
 app = FastAPI()
 
-createDB()
-
 def background_task():
+    asyncio.run(createDB())
     asyncio.run(worker())
 
 thread = threading.Thread(target=background_task)

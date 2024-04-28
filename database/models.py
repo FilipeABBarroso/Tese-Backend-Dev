@@ -1,6 +1,7 @@
 import enum
-from sqlalchemy import Column, Integer, String, TIMESTAMP, Boolean, ForeignKey, Enum, JSON
+from sqlalchemy import Column, ForeignKeyConstraint, Integer, PrimaryKeyConstraint, String, TIMESTAMP, Boolean, ForeignKey, Enum, JSON, UniqueConstraint
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
 class campaignTypes(enum.Enum):
     daily = "Daily"
@@ -34,9 +35,13 @@ class EntitiesGroup(Base):
 class Entity_EntitiesGroup(Base):
     __tablename__ = 'entity_EntitiesGroup'
     id = Column(Integer, primary_key=True)
-    entityId = Column(Integer, ForeignKey(Entity.id))
-    entityGroupId = Column(String(250), ForeignKey(EntitiesGroup.tag))
-    entityGroupVersion = Column(Integer, ForeignKey(EntitiesGroup.version))
+    entityId = Column(Integer)
+    entityGroupId = Column(String(250))
+    entityGroupVersion = Column(Integer)
+    __table_args__ = (
+        ForeignKeyConstraint(['entityId'], ['entity.id']),
+        ForeignKeyConstraint(['entityGroupId', 'entityGroupVersion'], ['entitiesGroup.tag', 'entitiesGroup.version']),
+    )
 
 class TestService(Base):
     __tablename__ = 'testService'
@@ -52,9 +57,13 @@ class TestServiceGroup(Base):
 class TestService_TestServiceGroup(Base):
     __tablename__ = 'testService_TestServiceGroup'
     id = Column(Integer, primary_key=True)
-    testServiceId = Column(Integer, ForeignKey(TestService.id))
-    testServiceGroupId = Column(Integer, ForeignKey(TestServiceGroup.id))
-    testServiceGroupVersion = Column(Integer, ForeignKey(TestServiceGroup.version))
+    testServiceId = Column(Integer)
+    testServiceGroupId = Column(Integer)
+    testServiceGroupVersion = Column(Integer)
+    __table_args__ = (
+        ForeignKeyConstraint(['testServiceId'], ['testService.id']),
+        ForeignKeyConstraint(['testServiceGroupId', 'testServiceGroupVersion'], ['testServiceGroup.id', 'testServiceGroup.version']),
+    )
 
 class Campaign(Base):
     __tablename__ = 'campaign'
@@ -66,11 +75,16 @@ class Campaign(Base):
 class Campaign_TestServiceGroup_EntitiesGroup(Base):
     __tablename__ = 'campaign_TestServiceGroup_EntitiesGroup'
     id = Column(Integer, primary_key=True)
-    campaignId = Column(String(50), ForeignKey(Campaign.tag), unique=False)
-    entitiesGroupId = Column(String(250), ForeignKey(EntitiesGroup.tag), unique=False)
-    entitiesGroupVersion = Column(Integer, ForeignKey(EntitiesGroup.version), unique=False)
-    testServiceGroupId = Column(Integer, ForeignKey(TestServiceGroup.id), unique=False)
-    testServiceGroupVersion = Column(Integer, ForeignKey(TestServiceGroup.version), unique=False)
+    campaignId = Column(String(50), unique=False)
+    entitiesGroupId = Column(String(250), unique=False)
+    entitiesGroupVersion = Column(Integer, unique=False)
+    testServiceGroupId = Column(Integer, unique=False)
+    testServiceGroupVersion = Column(Integer, unique=False)
+    __table_args__ = (
+        ForeignKeyConstraint(['campaignId'], ['campaign.tag']),
+        ForeignKeyConstraint(['entitiesGroupId', 'entitiesGroupVersion'], ['entitiesGroup.tag', 'entitiesGroup.version']),
+        ForeignKeyConstraint(['testServiceGroupId', 'testServiceGroupVersion'], ['testServiceGroup.id', 'testServiceGroup.version']),
+    )
 
 class Result(Base):
     __tablename__ = 'result'
