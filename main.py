@@ -278,31 +278,32 @@ async def getCampaignResultFile(path):
       wb.save(excel_file_path)
       # Load JSON data
       json_data = json.load(json_file)
-
       for sheet_name, data in json_data.items():
         # Convert JSON data to pandas DataFrame
         df = pd.DataFrame(data)
         sheet = wb.create_sheet(title=sheet_name)
          # Write column headers with formatting
         for col_idx, column_name in enumerate(df.columns, start=1):
-          cell = sheet.cell(row=1, column=col_idx)
-          cell.value = column_name
-          cell.font = openpyxl.styles.Font(bold=True)
-          cell.alignment = openpyxl.styles.Alignment(horizontal='center')
+          header_cell = sheet.cell(row=1, column=col_idx)
+          header_cell.value = column_name
+          header_cell.font = openpyxl.styles.Font(bold=True)
+          header_cell.alignment = openpyxl.styles.Alignment(horizontal='center')
 
         # Write data rows
         for r_idx, row in enumerate(dataframe_to_rows(df, index=False, header=False), start=2):
           for c_idx, value in enumerate(row, start=1):
             cell = sheet.cell(row=r_idx, column=c_idx)
-            cell.value = value
-
+            cell.value = str(value)
+      
       wb.remove(wb['Sheet'])
       wb.save(excel_file_path)
       # Check if the Excel file exists
       if os.path.exists(excel_file_path):
         # Return the Excel file as a FileResponse
-        return FileResponse(excel_file_path, media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', filename='data.xlsx')
+        headers = {'Content-Disposition': 'attachment; filename="Book.xlsx"', 'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}
+        return FileResponse(excel_file_path, headers=headers, media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', filename='data.xlsx')
       else:
         raise HTTPException(status_code=500, detail="Failed to create Excel file.")
   except Exception as e:
+      print(e)
       raise HTTPException(status_code=500, detail=str(e))

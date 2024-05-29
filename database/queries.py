@@ -12,6 +12,22 @@ from .models import *
 from database.initializer.initialize import engine
 import os
 
+async def updateTests():
+  if not os.path.exists('database/servicesInfo.json'):
+    print("JSON file 'servicesInfo.json' not found.")
+    return
+  with open('database/servicesInfo.json', 'r') as data:
+    testsData = json.load(data)
+  Base.metadata.drop_all(bind=engine)
+  Base.metadata.create_all(bind=engine)
+  out = []
+  for (dirpath, dirnames, filenames) in walk("./controller/scripts"):
+    for file in filenames:
+      out.append([testsData[file]['testName'] or file, file])
+    break
+  await create_testServices(out)
+  print("DB Creation completed!")
+
 async def createDB():
   inspector = inspect(engine)
   existing_tables = inspector.get_table_names()
@@ -329,7 +345,7 @@ async def get_campaigns():
       ))
       .join(TestService_TestServiceGroup, and_(max_version_subquery.c.id == TestService_TestServiceGroup.testServiceGroupId, max_version_subquery.c.max_version == TestService_TestServiceGroup.testServiceGroupVersion))
       .outerjoin(max_date_subquery, max_date_subquery.c.cte_id == Campaign_TestServiceGroup_EntitiesGroup.id)
-      .group_by(Campaign, Campaign_TestServiceGroup_EntitiesGroup.entitiesGroupId, max_date_subquery.c.max_date)
+      .group_by(Campaign.tag, Campaign_TestServiceGroup_EntitiesGroup.entitiesGroupId, max_date_subquery.c.max_date)
       .order_by(Campaign.tag.desc())
     )
     result = async_result.fetchall()
@@ -361,7 +377,7 @@ async def get_group_campaigns(tag):
       ))
       .join(TestService_TestServiceGroup, and_(max_version_subquery.c.id == TestService_TestServiceGroup.testServiceGroupId, max_version_subquery.c.max_version == TestService_TestServiceGroup.testServiceGroupVersion))
       .outerjoin(max_date_subquery, max_date_subquery.c.cte_id == Campaign_TestServiceGroup_EntitiesGroup.id)
-      .group_by(Campaign, Campaign_TestServiceGroup_EntitiesGroup.entitiesGroupId, max_date_subquery.c.max_date)
+      .group_by(Campaign.tag, Campaign_TestServiceGroup_EntitiesGroup.entitiesGroupId, max_date_subquery.c.max_date)
       .order_by(Campaign.tag.desc())
     )
     result = async_result.fetchall()
@@ -608,7 +624,7 @@ async def get_group(tag):
         Entity_EntitiesGroup.entityGroupVersion == max_version_subquery.c.max_version,
       ))
       .outerjoin(groups_number_subquery, Entity.id == groups_number_subquery.c.id)
-      .group_by(Entity)
+      .group_by(Entity, groups_number_subquery)
       .order_by(Entity.id.desc()))
     result = async_result.fetchall()
     entities = convertEntitiesDataIntoJson(result)

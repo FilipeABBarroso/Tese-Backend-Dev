@@ -8,4 +8,11 @@ def runTest(entity):
   '''save_file = open("outputs/savedata-txtRecords.json", "w")  
   json.dump(json.loads(response.text), save_file, indent = 6)  
   save_file.close()  '''
-  return json.loads(response.text)
+  data = json.loads(response.text)
+  dataToOutput = {"entity": entity}
+  try:
+    dataToOutput["v"] = data["v"]
+    
+  except:
+    dataToOutput["error"] = "Data not found"
+  return dataToOutput

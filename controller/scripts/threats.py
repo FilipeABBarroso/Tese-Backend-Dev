@@ -1,11 +1,21 @@
 import json  
 import requests
 
-def getThreats(entity):
+def runTest(entity):
   url = f"https://web-check.xyz/api/threats?url={entity}"
 
   response = requests.get(url)
-  save_file = open("outputs/savedata-threats.json", "w")  
-  json.dump(json.loads(response.text), save_file, indent = 6)  
-  save_file.close()  
-  print("Done!")
+  data = json.loads(response.text)
+  dataToOutput = {"entity": entity}
+  try:
+    dataToOutput["urlHaus query status"] = data["urlHaus"]["query_status"]
+    dataToOutput["phishTank"] = data["phishTank"]["url0"]["in_database"]
+    dataToOutput["cloudmersive"] = data["cloudmersive"]
+    dataToOutput["unsafe Browsing"] = data["safeBrowsing"]["unsafe"]
+    
+  except:
+    if "error" in data:
+      dataToOutput["error"] = data["error"]
+    else:
+      dataToOutput["error"] = "Data not found"
+  return dataToOutput

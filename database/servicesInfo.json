@@ -67,10 +67,6 @@
     "testName": "Mail Config",
     "testService": "Tool"
   },
-  "ping.py": {
-    "testName": "Ping st",
-    "testService": "Tool"
-  },
   "quality.py": {
     "testName": "Quality",
     "testService": "Tool"
@@ -133,10 +129,10 @@
   },
   "virustotal.py": {
     "testName": "Virustotal",
-    "testService": "VirusTotal"
+    "testService": "Tool"
   },
   "whois.py": {
     "testName": "Whois",
-    "testService": "Whois"
+    "testService": "Tool"
   }
 }

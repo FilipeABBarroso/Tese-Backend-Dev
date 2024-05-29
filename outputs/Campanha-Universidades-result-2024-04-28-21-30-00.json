@@ -1,0 +1,160 @@
+{
+      "archives.py": [
+            {
+                  "entity": "www.utad.pt",
+                  "firstScan": "1997-06-29T05:10:27.000Z",
+                  "lastScan": "2024-05-29T08:12:07.000Z",
+                  "totalScans": 3082,
+                  "changeCount": 2372,
+                  "averagePageSize": 34392,
+                  "daysBetweenScans": 3.19,
+                  "daysBetweenChanges": 4.14,
+                  "scansPerDay": 0.31,
+                  "changesPerDay": 0.24
+            },
+            {
+                  "entity": "www.ualg.pt",
+                  "firstScan": "1998-01-24T04:54:47.000Z",
+                  "lastScan": "2024-05-29T10:17:24.000Z",
+                  "totalScans": 10505,
+                  "changeCount": 1704,
+                  "averagePageSize": 2746,
+                  "daysBetweenScans": 0.92,
+                  "daysBetweenChanges": 5.65,
+                  "scansPerDay": 1.09,
+                  "changesPerDay": 0.18
+            },
+            {
+                  "entity": "www.uminho.pt",
+                  "firstScan": "1998-12-02T05:52:45.000Z",
+                  "lastScan": "2024-05-29T11:07:30.000Z",
+                  "totalScans": 9506,
+                  "changeCount": 896,
+                  "averagePageSize": 1454,
+                  "daysBetweenScans": 0.98,
+                  "daysBetweenChanges": 10.39,
+                  "scansPerDay": 1.02,
+                  "changesPerDay": 0.1
+            },
+            {
+                  "entity": "www.up.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.uac.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.unl.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipbeja.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipb.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipcb.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipca.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipc.pt",
+                  "firstScan": "1998-12-05T01:36:01.000Z",
+                  "lastScan": "2024-05-11T10:36:11.000Z",
+                  "totalScans": 411,
+                  "changeCount": 220,
+                  "averagePageSize": 3253,
+                  "daysBetweenScans": 22.6,
+                  "daysBetweenChanges": 42.22,
+                  "scansPerDay": 0.04,
+                  "changesPerDay": 0.02
+            },
+            {
+                  "entity": "www.ipg.pt",
+                  "firstScan": "1997-04-19T21:02:34.000Z",
+                  "lastScan": "2024-05-28T06:28:41.000Z",
+                  "totalScans": 502,
+                  "changeCount": 199,
+                  "averagePageSize": 883,
+                  "daysBetweenScans": 19.72,
+                  "daysBetweenChanges": 49.75,
+                  "scansPerDay": 0.05,
+                  "changesPerDay": 0.02
+            },
+            {
+                  "entity": "www.ipleiria.pt",
+                  "firstScan": "2001-06-15T12:05:26.000Z",
+                  "lastScan": "2024-05-29T02:11:44.000Z",
+                  "totalScans": 2934,
+                  "changeCount": 1394,
+                  "averagePageSize": 6015,
+                  "daysBetweenScans": 2.86,
+                  "daysBetweenChanges": 6.01,
+                  "scansPerDay": 0.35,
+                  "changesPerDay": 0.17
+            },
+            {
+                  "entity": "www.iplisboa.pt",
+                  "firstScan": "2024-04-15T16:41:38.000Z",
+                  "lastScan": "2024-04-15T16:41:38.000Z",
+                  "totalScans": 1,
+                  "changeCount": 0,
+                  "averagePageSize": 345,
+                  "daysBetweenScans": 0,
+                  "daysBetweenChanges": null,
+                  "scansPerDay": null,
+                  "changesPerDay": null
+            },
+            {
+                  "entity": "www.ipportalegre.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipp.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipsantarem.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ips.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipt.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipvc.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.ipv.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.esenfc.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.esel.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.esenf.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            },
+            {
+                  "entity": "www.enautica.pt",
+                  "error": "Error fetching Wayback data: Request failed with status code 429"
+            }
+      ]
+}

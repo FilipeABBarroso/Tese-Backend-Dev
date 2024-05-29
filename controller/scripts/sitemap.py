@@ -1,11 +1,18 @@
 import json  
 import requests
 
-def getSitemap(entity):
-  url = f"https://web-check.xyz/api/sitemap?url={entity}"
+def runTest(entity):
+  dataToOutput = {"entity": entity}
+  try:
+    url = f"https://web-check.xyz/api/sitemap?url={entity}"
 
-  response = requests.get(url)
-  save_file = open("outputs/savedata-sitemap.json", "w")  
-  json.dump(json.loads(response.text), save_file, indent = 6)  
-  save_file.close()  
-  print("Done!")
+    response = requests.get(url)
+    data = json.loads(response.text)
+    if "error" in data:
+      dataToOutput["error"] = data["error"]
+    else:
+      dataToOutput["sitemapindex"] = data["sitemapindex"]["sitemap"]
+    
+  except:
+    dataToOutput["error"] = "Data not found"
+  return dataToOutput

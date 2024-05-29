@@ -8,32 +8,34 @@ import importlib.util
 
 async def worker():
   while True:
-    campaigns = await getActiveCampaigns()
-    for campaign in campaigns:
-      if type(campaign["nextRun"]) == list:
-        date = datetime.strptime(campaign["nextRun"][0], "%Y-%m-%dT%H:%M:%S.%fZ")
-        runs = campaign["nextRun"][1:]
-      else:
-        date = datetime.strptime(json.loads(campaign["nextRun"])[0], "%Y-%m-%dT%H:%M:%S.%fZ")
-        runs = json.loads(campaign["nextRun"])[1:]
-      if(date < datetime.now()):
-        startTime = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-        tag = campaign["tag"]
-        formatted_date = date.strftime('%Y-%m-%d-%H-%M-%S')
-        cte = await get_cte_id(tag)
-        tests = await get_campaign_tests(tag)
-        entities = await get_campaign_entities(tag)
-        tasks = [run_test(test, entities) for test in tests]
-        results = await asyncio.gather(*tasks)
-        concatenated_json = {}
-        for result in results:
-          print("result: ", result)
-          concatenated_json.update(result)
-        path = f'outputs/{tag}-result-{formatted_date}.json'
-        with open(path, "w") as save_file:
-          json.dump(concatenated_json, save_file, indent=6)
-          save_file.close()
-        await update_campaign_and_create_result(tag, runs, cte, path, startTime)
+    try:
+      campaigns = await getActiveCampaigns()
+      for campaign in campaigns:
+        if type(campaign["nextRun"]) == list:
+          date = datetime.strptime(campaign["nextRun"][0], "%Y-%m-%dT%H:%M:%S.%fZ")
+          runs = campaign["nextRun"][1:]
+        else:
+          date = datetime.strptime(json.loads(campaign["nextRun"])[0], "%Y-%m-%dT%H:%M:%S.%fZ")
+          runs = json.loads(campaign["nextRun"])[1:]
+        if(date < datetime.now()):
+          startTime = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
+          tag = campaign["tag"]
+          formatted_date = date.strftime('%Y-%m-%d-%H-%M-%S')
+          cte = await get_cte_id(tag)
+          tests = await get_campaign_tests(tag)
+          entities = await get_campaign_entities(tag)
+          tasks = [run_test(test, entities) for test in tests]
+          results = await asyncio.gather(*tasks)
+          concatenated_json = {}
+          for result in results:
+            concatenated_json.update(result)
+          path = f'outputs/{tag}-result-{formatted_date}.json'
+          with open(path, "w") as save_file:
+            json.dump(concatenated_json, save_file, indent=6)
+            save_file.close()
+          await update_campaign_and_create_result(tag, runs, cte, path, startTime)
+    except Exception as e:
+       print(f"worker error: {e}")
     await asyncio.sleep(60)
 
 async def run_test(test, entities):
